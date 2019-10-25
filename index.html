@@ -5,25 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>SportScene</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <div class="city">
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"> SportScene</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">JavaScript</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Row 1 -->
+        <div class="row">
+            <!-- The search bar & input will go here -->
+            <div class="col l4">
+                <form class="col l12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Search</label>
+                            <button class="btn waves-effect waves-light" type="submit" name="action"><i
+                                    class="fas fa-search"></i> Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- All Search Data will appear here -->
+            <div class="col l8">
 
-        
-    </div>
 
-        <div class="card-body">
-                <!-- Use the search bar to find weather by city name -->
-                        <input type="text" class="form-control" id="get-weather">
-                        <i class="fa fa-search"></i><button type="submit" class="btn btn-default" id="run-search">
-                            Search</button>
-                <div class="search-data"></div>
             </div>
         </div>
 
 
+
+    </div>
+    <script src="https://kit.fontawesome.com/c6c0d775a0.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
