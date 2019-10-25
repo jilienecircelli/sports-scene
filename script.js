@@ -3,7 +3,7 @@ var city = "";
 
 
 $("button").on("click", function() {
-    var caContent = $("#get-weather")
+    var caContent = $("#get-location")
 
     var letsGo = caContent.val()
     city = letsGo
