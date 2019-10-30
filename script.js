@@ -26,15 +26,16 @@ $("button").on("click", function() {
         card.addClass("event-card");
         eventCards.append(card);
 
-
         // Event Name
-        card.append("<h5>" + response._embedded.events[0].name)
-            // Pull event date and reverse string
+
+        // Pull event date and reverse string
         var eventDate = response._embedded.events[0].dates.start.localDate;
         var date = eventDate.split("-").reverse().join("-")
-            // Event Date
-        card.append("<div>" + "Date: " + date)
-            // Event Venue
+        card.append("<div class='event-title'>" + response._embedded.events[0].name + "<div class='date-info'>" + date)
+
+        // Event Date
+        // card.append("<div>" + date)
+        // Event Venue
         card.append("<div>" + "Venue: " + response._embedded.events[0]._embedded.venues[0].name)
             // Event Images
         card.append("<div>" + "<img src=" + response._embedded.events[0]._embedded.attractions[0].images[0].url + ">" + "<img src=" + response._embedded.events[0]._embedded.attractions[1].images[0].url + ">")

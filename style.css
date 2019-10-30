@@ -9,7 +9,9 @@ nav {
 }
 
 body {
-    background: url(assets/photo-1506143925201-0252c51780b0.jpg)
+    background: url(assets/darkness.png);
+    /* background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .search-area {
@@ -53,4 +55,14 @@ a:hover {
     width: 200px;
     height: 200px;
     background-color: grey;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.date-info {
+    font-size: 14px;
+    font-weight: bold;
 }
