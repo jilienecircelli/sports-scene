@@ -9,9 +9,13 @@ nav {
 }
 
 body {
+<<<<<<< HEAD
     background: url(assets/darkness.png);
     /* background-repeat: no-repeat;
     background-size: cover; */
+=======
+    background: url(assets/Sports.png)
+>>>>>>> 88c44561d2396bacd5e790f96f5a3edcde67efc6
 }
 
 .search-area {
