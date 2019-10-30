@@ -29,9 +29,12 @@ $("button").on("click", function() {
         method: "GET"
     }).then(function(response) {
         console.log(response)
-        console.log(response._embedded.events[0].name)
-        var event = response._embedded.events[0]
-        var venue = response._embedded.events[0]._embedded.venues[0]
+        console.log(response._embedded.events.length)
+
+        for (var i = 0; i < response._embedded.events.length; i++)
+        {
+        var event = response._embedded.events[i]
+        var venue = response._embedded.events[i]._embedded.venues[0]
 
         var eventCards = $(".event-data")
 
@@ -81,5 +84,6 @@ $("button").on("click", function() {
 
         eventCards.append(card);
         initMap(lat, lng)
+        }
     });
 })
