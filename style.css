@@ -1,6 +1,6 @@
-nav {
+nav.brand-logo {
     background-color: transparent;
-    color: white;
+    color: black;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -9,7 +9,7 @@ nav {
 }
 
 body {
-    background: url(assets/Sports.png);
+    background: url(assets/hex.jpg);
 }
 
 .search-area {
@@ -41,8 +41,9 @@ img {
     margin-left: 10px;
 }
 
-a {
+a#tix {
     text-decoration: underline;
+    display: inline-flex;
 }
 
 a:hover {
@@ -50,9 +51,10 @@ a:hover {
 }
 
 #map {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     background-color: grey;
+    display: inline-flex;
 }
 
 .event-title {
