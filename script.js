@@ -8,6 +8,7 @@ $("button").on("click", function() {
     // $(".search-area").addClass("");
     var caContent = $("#get-city")
 
+    $(".event-data").empty()
     var letsGo = caContent.val()
     city = letsGo
     var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=sport&city=" + city + "&apikey=" + APIkey;
@@ -41,30 +42,30 @@ $("button").on("click", function() {
         card.append("<a href=" + response._embedded.events[0].url + ">Click here to purchase tickets!</a>")
 
 
+        // Setting variables for lat/lng of map
+        var latitude = response._embedded.events[0]._embedded.venues[0].location.latitude;
+        var longitude = response._embedded.events[0]._embedded.venues[0].location.longitude;
 
+        var lat = parseFloat(latitude);
+        var lng = parseFloat(longitude)
 
         // // Map Function
 
-        // function initMap() {
-        //     var latitude = response._embedded.events[0]._embedded.venues[0].location.latitude;
-        //     var longitude = response._embedded.events[0]._embedded.venues[0].location.longitude;
-        //     // The location of event
-        //     var latLng = { lat: latitude, lng: longitude };
-        //     // The map, centered at Uluru
-        //     var map = new google.maps.Map(
-        //         $("#map"), { zoom: 4, center: latLng });
-        //     // The marker, positioned at event venue
-        //     var marker = new google.maps.Marker({ position: latLng, map: map });
-        // }
-        // initMap()
+        function initMap() {
+            // The location of event
+            var latLng = { lat: lat, lng: lng };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 4, center: latLng });
+            // The marker, positioned at event venue
+            var marker = new google.maps.Marker({
+                position: latLng,
+                map: map
+            });
+        }
 
-
-        // // Append map below link
-        // card.append("<div id='map'>" + map)
-
-
-
+        // Append map below link
+        card.append("<div id='map'>")
+        initMap()
     });
-
-
 })
