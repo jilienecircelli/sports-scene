@@ -1,4 +1,56 @@
 nav {
-    background-color: grey;
+    background-color: transparent;
     color: white;
+    font-family: ;
+}
+
+.container {
+    height: 100vh;
+}
+
+body {
+    background: url(assets/photo-1506143925201-0252c51780b0.jpg)
+}
+
+.search-area {
+    padding: 28%
+}
+
+.input-field {
+    background-color: #F4EDED;
+    border: 2px;
+    border-radius: 15px;
+    padding: 10px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.event-card {
+    background-color: #F4EDED;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+}
+
+img {
+    width: 150px;
+    height: 100px;
+    border: 1 px black solid;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: red;
+}
+
+#map {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
 }
