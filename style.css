@@ -1,7 +1,7 @@
 nav {
     background-color: transparent;
     color: white;
-    font-family: ;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .container {
@@ -9,9 +9,7 @@ nav {
 }
 
 body {
-    background: url(assets/darkness.png);
-    /* background-repeat: no-repeat;
-    background-size: cover; */
+    background: url(assets/Sports.png);
 }
 
 .search-area {
