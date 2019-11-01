@@ -50,7 +50,7 @@ a:hover {
     color: red;
 }
 
-#map {
+.map {
     width: 400px;
     height: 400px;
     background-color: grey;
