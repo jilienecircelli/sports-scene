@@ -25,6 +25,8 @@ body {
     width: 100%;
 }
 
+button {}
+
 .event-card {
     background-color: #F4EDED;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -82,7 +84,8 @@ a:hover {
     padding: 10px
 }
 
-.date {
+.date,
+.weather {
     padding: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
