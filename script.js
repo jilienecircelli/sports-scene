@@ -7,7 +7,7 @@ var currentDay = $(".time");
 var date = $("<div class='date'>");
 
 function getCurrentTime() {
-    date.text(moment().format("dddd, MMMM Do YYYY"));
+    date.html(moment().format("dddd") + "<br>" + moment().format("MMMM Do YYYY"));
     currentDay.append(date);
 }
 
@@ -72,7 +72,7 @@ function pullingEvents() {
 
             var card = $("<div class='event-card row'>");
 
-            // Event Name
+            
 
             // Pull event date and reverse string
             var leftColumn = $("<div class='col s12 m3'></div>");
