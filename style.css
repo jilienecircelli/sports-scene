@@ -66,3 +66,18 @@ a:hover {
     font-size: 14px;
     font-weight: bold;
 }
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    background-color: coral;
+}
+
+.title {
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    padding: 10px
+}
