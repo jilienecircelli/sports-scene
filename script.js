@@ -1,15 +1,27 @@
 var APIkey = "tOFft5fp4kxxA1Xq7PQ6ManIDhkIdcqZ";
 var city = "";
 
+// time variable
+setInterval(getCurrentTime, 1000);
+var currentDay = $(".time");
+var date = $("<div class='date'>");
+
+function getCurrentTime() {
+    date.text(moment().format('dddd, MMMM Do YYYY'));
+    currentDay.append(date);
+}
+
 function initMap(lat, lng, targetIndex) {
     // The location of event
-    var latLng = { lat: lat, lng: lng };
-    // The map, centered at Uluru
+    // var latLng = { lat: lat, lng: lng };
+    var latlng = new google.maps.LatLng(lat, lng);
+    // The map, centered at city venue
+    console.log(document.getElementById(`map${targetIndex}`))
     var map = new google.maps.Map(
-        document.getElementById(`map${targetIndex}`), { zoom: 11, center: latLng });
+        document.getElementById(`map${targetIndex}`), { zoom: 11, center: latlng });
     // The marker, positioned at event venue
     var marker = new google.maps.Marker({
-        position: latLng,
+        position: latlng,
         map: map
     });
 }
@@ -27,6 +39,7 @@ function embedTheMap(index) {
 
         var lat = parseFloat(latitude);
         var lng = parseFloat(longitude);
+        console.log("Lat & Lng", lat, lng)
         initMap(lat, lng, index)
 
 
@@ -61,6 +74,9 @@ function pullingEvents() {
             card.append(leftColumn)
             card.append(rightColumn)
 
+            rightColumn.append(`<div id='map${i}' class='map'>`)
+            embedTheMap(i)
+
             // Event Date shortening
             var date = event.dates.start.localDate.split("-").reverse().join("-")
                 // Event Name
@@ -80,48 +96,30 @@ function pullingEvents() {
             leftColumn.append(venueNameEl)
             leftColumn.append(eventImageEl)
             console.log(card)
-
+            eventCards.append(card);
             //if (i == 0) {
-            rightColumn.append(`<div id='map${i}' class='map'>`)
-                // } else {
-                //     rightColumn.append("<button class='mapBtn' list=" + i + ">Click to display map</button>")
-                // }
-            embedTheMap(i)
+            // } else {
+            //     rightColumn.append("<button class='mapBtn' list=" + i + ">Click to display map</button>")
+            // }
 
-
-            // Setting variables for lat/lng of map
-
-
-            // // Map Function
 
             console.log(i)
-
-            eventCards.append(card);
-
 
         }
     });
 }
 
-//function displayNxtMap(){
-//     $(".mapBtn").on("click", function(){
-//         $("#map").remove()
-//     })
-
-// }
 
 $(".btn").on("click", function() {
-        $(".search-area").removeClass();
-        // $(".search-area").addClass("");
-        var caContent = $("#get-city")
+    $(".search-area").removeClass();
+    // $(".search-area").addClass("");
+    var caContent = $("#get-city")
 
-        $(".event-data").empty()
-        var letsGo = caContent.val()
-        city = letsGo
-        pullingEvents()
+    $(".event-data").empty()
+    var letsGo = caContent.val()
+    city = letsGo
+    pullingEvents()
 
-        // embedTheMap()
+    // embedTheMap()
 
-
-    })
-    //displayNxtMap()
+})
