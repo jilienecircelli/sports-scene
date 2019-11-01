@@ -31,59 +31,58 @@ $("button").on("click", function() {
         console.log(response)
         console.log(response._embedded.events.length)
 
-        for (var i = 0; i < response._embedded.events.length; i++)
-        {
-        var event = response._embedded.events[i]
-        var venue = response._embedded.events[i]._embedded.venues[0]
+        for (var i = 0; i < response._embedded.events.length; i++) {
+            var event = response._embedded.events[i]
+            var venue = response._embedded.events[i]._embedded.venues[0]
 
-        var eventCards = $(".event-data")
+            var eventCards = $(".event-data")
 
-        var card = $("<div class='event-card row'>");
+            var card = $("<div class='event-card row'>");
 
 
-        // Event Name
-
-        // Pull event date and reverse string
-        var leftColumn = $("<div class='col s12 m6'></div>")
-        var rightColumn = $("<div class='col s12 m6'></div>")
-        card.append(leftColumn)
-        card.append(rightColumn)
-
-        // Event Date shortening
-        var date = event.dates.start.localDate.split("-").reverse().join("-")
             // Event Name
-        var eventNameEl = $("<h2 class='event-title'>" + event.name + "</h2>")
-            // Event Date
-        var eventDateEl = $("<div class='date-info'>" + date + "</div>")
-            // Event Venue
-        var venueNameEl = $("<div>" + "Venue: " + venue.name + "</div>");
-        // Event Images
-        var eventImageEl = $("<img src=" + event._embedded.attractions[0].images[0].url + ">" + "<img src=" + event._embedded.attractions[1].images[0].url + ">");
-        // Link to purchase tickets
-        var eventUrlEl = $("<a id='tix' href=" + event.url + ">Click here to purchase tickets!</a>");
+
+            // Pull event date and reverse string
+            var leftColumn = $("<div class='col s12 m6'></div>")
+            var rightColumn = $("<div class='col s12 m6'></div>")
+            card.append(leftColumn)
+            card.append(rightColumn)
+
+            // Event Date shortening
+            var date = event.dates.start.localDate.split("-").reverse().join("-")
+                // Event Name
+            var eventNameEl = $("<h2 class='event-title'>" + event.name + "</h2>")
+                // Event Date
+            var eventDateEl = $("<div class='date-info'>" + date + "</div>")
+                // Event Venue
+            var venueNameEl = $("<div>" + "Venue: " + venue.name + "</div>");
+            // Event Images
+            var eventImageEl = $("<img src=" + event._embedded.attractions[0].images[0].url + ">" + "<img src=" + event._embedded.attractions[1].images[0].url + ">");
+            // Link to purchase tickets
+            var eventUrlEl = $("<a id='tix' href=" + event.url + ">Click here to purchase tickets!</a>");
 
 
-        leftColumn.append(eventNameEl)
-        leftColumn.append(eventDateEl)
-        leftColumn.append(venueNameEl)
-        leftColumn.append(eventImageEl)
+            leftColumn.append(eventNameEl)
+            leftColumn.append(eventDateEl)
+            leftColumn.append(venueNameEl)
+            leftColumn.append(eventImageEl)
 
-        rightColumn.append("<div id='map'>")
-
-
-        // Setting variables for lat/lng of map
-        var latitude = venue.location.latitude;
-        var longitude = venue.location.longitude;
-
-        var lat = parseFloat(latitude);
-        var lng = parseFloat(longitude)
-
-        // // Map Function
+            rightColumn.append("<div id='map'>")
 
 
+            // Setting variables for lat/lng of map
+            var latitude = venue.location.latitude;
+            var longitude = venue.location.longitude;
 
-        eventCards.append(card);
-        initMap(lat, lng)
+            var lat = parseFloat(latitude);
+            var lng = parseFloat(longitude)
+
+            // // Map Function
+
+
+
+            eventCards.append(card);
+            initMap(lat, lng)
         }
     });
 })
