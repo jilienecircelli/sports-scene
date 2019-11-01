@@ -20,7 +20,7 @@ function embedTheMap(index) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         var venue = response._embedded.events[index]._embedded.venues[0]
         var latitude = venue.location.latitude;
         var longitude = venue.location.longitude;
@@ -40,7 +40,7 @@ function pullingEvents() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response)
         console.log(response._embedded.events.length)
 
@@ -63,11 +63,11 @@ function pullingEvents() {
 
             // Event Date shortening
             var date = event.dates.start.localDate.split("-").reverse().join("-")
-            // Event Name
+                // Event Name
             var eventNameEl = $("<h2 class='event-title'>" + event.name + "</h2>")
-            // Event Date
+                // Event Date
             var eventDateEl = $("<div class='date-info'>" + date + "</div>")
-            // Event Venue
+                // Event Venue
             var venueNameEl = $("<div>" + "Venue: " + venue.name + "</div>");
             // Event Images
             var eventImageEl = $("<img src=" + event._embedded.attractions[0].images[0].url + ">" + "<img src=" + event._embedded.attractions[1].images[0].url + ">");
@@ -82,10 +82,10 @@ function pullingEvents() {
             console.log(card)
 
             //if (i == 0) {
-                rightColumn.append(`<div id='map${i}' class='map'>`)
-            // } else {
-            //     rightColumn.append("<button class='mapBtn' list=" + i + ">Click to display map</button>")
-            // }
+            rightColumn.append(`<div id='map${i}' class='map'>`)
+                // } else {
+                //     rightColumn.append("<button class='mapBtn' list=" + i + ">Click to display map</button>")
+                // }
             embedTheMap(i)
 
 
@@ -110,18 +110,18 @@ function pullingEvents() {
 
 // }
 
-$(".btn").on("click", function () {
-    $(".search-area").removeClass();
-    // $(".search-area").addClass("");
-    var caContent = $("#get-city")
+$(".btn").on("click", function() {
+        $(".search-area").removeClass();
+        // $(".search-area").addClass("");
+        var caContent = $("#get-city")
 
-    $(".event-data").empty()
-    var letsGo = caContent.val()
-    city = letsGo
-    pullingEvents()
+        $(".event-data").empty()
+        var letsGo = caContent.val()
+        city = letsGo
+        pullingEvents()
 
-    // embedTheMap()
+        // embedTheMap()
 
 
-})
-//displayNxtMap()
+    })
+    //displayNxtMap()
