@@ -20,7 +20,7 @@ body {
     background-color: white;
     border: 2px;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
     display: inline-flex;
     width: 100%;
     -webkit-box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
@@ -34,6 +34,7 @@ body {
     background-color: #1939C9;
     opacity: 80%;
     height: 45px;
+    align-content: center;
 }
 
 .event-card {
@@ -53,10 +54,6 @@ img {
     margin-left: 10px;
 }
 
-a#tix {
-    text-decoration: underline;
-    display: inline-flex;
-}
 
 a:hover {
     color: red;
@@ -111,5 +108,9 @@ a:hover {
     color: white;
 }
 .tixlink {
+    text-decoration: underline;
     display: block;
+}
+.fa-search {
+    margin-top: 5px;
 }
