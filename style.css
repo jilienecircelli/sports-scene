@@ -84,6 +84,12 @@ a:hover {
     padding: 10px
 }
 
+#wicon {
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+}
+
 .date,
 .weather {
     padding: 10px;
