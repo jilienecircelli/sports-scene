@@ -82,7 +82,9 @@ function pullingEvents() {
       card.append(middleColumn);
       card.append(rightColumn);
 
-      rightColumn.append(`<div id='map${i}' class='map'>`);
+      rightColumn.append(
+        `<div id='map${i}' style='width: 200px; height:200px' class='map'>`
+      );
       embedTheMap(i);
 
       // Event Date shortening
