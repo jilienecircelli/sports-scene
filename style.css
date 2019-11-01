@@ -1,7 +1,7 @@
 nav.brand-logo {
     background-color: transparent;
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .container {
@@ -13,25 +13,37 @@ body {
 }
 
 .search-area {
-    padding: 28%
+    padding: 28%;
 }
 
 .input-field {
-    background-color: #F4EDED;
+    background-color: white;
     border: 2px;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     display: inline-flex;
     width: 100%;
+    -webkit-box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
+    box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
+    opacity: 90%;
+}
+
+.btn,
+.btn-results {
+    background-color: #1939C9;
+    opacity: 80%;
+    height: 45px;
 }
 
 .event-card {
-    background-color: #F4EDED;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     border-radius: 15px;
     padding: 15px;
     margin: 10px;
+    opacity: 90%;
 }
 
 img {
@@ -72,23 +84,29 @@ a:hover {
     justify-content: space-between;
     height: 100px;
     width: 100%;
-    background-color: coral;
+    background-color: #1939C9;
+    opacity: 80%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .title {
     font-size: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Lobster', cursive;
     color: white;
-    padding: 10px
+    padding: 10px;
 }
-#wicon{
+
+#wicon {
     width: 35px;
     height: 35px;
     margin: 0px;
 }
-.date, .weather {
+
+.date,
+.weather {
     padding: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     color: white;
 }
