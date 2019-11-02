@@ -17,18 +17,6 @@ body {
 }
 
 .input-field {
-<<<<<<< HEAD
-  background-color: white;
-  border: 2px;
-  border-radius: 15px;
-  padding: 5px;
-  display: inline-flex;
-  width: 100%;
-  -webkit-box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
-  -moz-box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
-  box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
-  opacity: 80%;
-=======
     background-color: white;
     border: 2px;
     border-radius: 15px;
@@ -39,21 +27,14 @@ body {
     -moz-box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
     box-shadow: 18px 18px 39px 0px rgba(0, 0, 0, 0.37);
     opacity: 90%;
->>>>>>> 6491a60ae3c85aa595405a219c0da9aab6b4ad94
 }
 
 .btn,
 .btn-results {
-<<<<<<< HEAD
-  background-color: #1939c9;
-  opacity: 70%;
-  height: 45px;
-=======
     background-color: #1939C9;
     opacity: 80%;
     height: 45px;
     align-content: center;
->>>>>>> 6491a60ae3c85aa595405a219c0da9aab6b4ad94
 }
 
 .event-card {
@@ -73,13 +54,6 @@ img {
   margin-left: 10px;
 }
 
-<<<<<<< HEAD
-a#tix {
-  text-decoration: underline;
-  display: inline-flex;
-}
-=======
->>>>>>> 6491a60ae3c85aa595405a219c0da9aab6b4ad94
 
 a:hover {
   color: red;
@@ -128,13 +102,6 @@ a:hover {
 
 .date,
 .weather {
-<<<<<<< HEAD
-  padding: 10px;
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-  color: white;
-}
-=======
     padding: 10px;
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
@@ -147,4 +114,3 @@ a:hover {
 .fa-search {
     margin-top: 5px;
 }
->>>>>>> 6491a60ae3c85aa595405a219c0da9aab6b4ad94
