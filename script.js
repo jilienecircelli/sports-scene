@@ -38,7 +38,7 @@ function embedTheMap(index) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         var venue = response._embedded.events[index]._embedded.venues[0];
         var latitude = venue.location.latitude;
         var longitude = venue.location.longitude;
@@ -60,7 +60,7 @@ function pullingEvents() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function (response) {
+    }).then(function(response) {
         console.log(response);
         console.log(response._embedded.events.length);
 
@@ -72,7 +72,7 @@ function pullingEvents() {
 
             var card = $("<div class='event-card row'>");
 
-            
+
 
             // Pull event date and reverse string
             var leftColumn = $("<div class='col s12 m3'></div>");
@@ -107,9 +107,9 @@ function pullingEvents() {
                 timeValue = "12";
             }
 
-            timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes;  // get minutes
+            timeValue += (minutes < 10) ? ":0" + minutes : ":" + minutes; // get minutes
 
-            timeValue += (hours >= 12) ? " P.M." : " A.M.";  // get AM/PM
+            timeValue += (hours >= 12) ? " P.M." : " A.M."; // get AM/PM
 
             // show
 
@@ -182,7 +182,7 @@ function pullingEvents() {
 
 function currentlocationWeather() {
     var apiKey = "03e24d7d731fc83efc64f5aa4eb937c1";
-    navigator.geolocation.getCurrentPosition(function (position) {
+    navigator.geolocation.getCurrentPosition(function(position) {
         longitude = position.coords.longitude;
         latitude = position.coords.latitude;
         console.log(longitude);
@@ -196,7 +196,7 @@ function currentlocationWeather() {
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).then(function (response) {
+        }).then(function(response) {
             console.log(response);
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -233,11 +233,11 @@ function cityWeather() {
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
-        url: queryURL,
-        method: "GET"
-    })
+            url: queryURL,
+            method: "GET"
+        })
         // We store all of the retrieved data inside of an object called "response"
-        .then(function (response) {
+        .then(function(response) {
             var iconcode = response.weather[0].icon;
             var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
 
@@ -261,7 +261,7 @@ function cityWeather() {
         });
 }
 
-$(".btn").on("click", function () {
+$(".btn").on("click", function() {
     $(".search-area").removeClass();
     $(".search-area").addClass("btn-results");
     var caContent = $("#get-city");
