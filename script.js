@@ -263,7 +263,6 @@ function cityWeather() {
 
 $(".btn").on("click", function() {
     $(".search-area").removeClass();
-    $(".welcome-msg").remove();
     $(".search-area").addClass("btn-results");
     var caContent = $("#get-city");
 
