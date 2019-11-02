@@ -83,7 +83,7 @@ function pullingEvents() {
             card.append(rightColumn);
 
             rightColumn.append(
-                `<div id='map${i}' style='width: 200px; height:200px' class='map'>`
+                `<div id='map${i}' style='width: 260px; height: 270px' class='map'>`
             );
             embedTheMap(i);
 
