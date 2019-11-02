@@ -226,7 +226,7 @@ currentlocationWeather();
 function cityWeather() {
     var apiKey = "03e24d7d731fc83efc64f5aa4eb937c1";
     var queryURL =
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
+        "http://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         "&appid=" +
         apiKey;
@@ -263,6 +263,7 @@ function cityWeather() {
 
 $(".btn").on("click", function() {
     $(".search-area").removeClass();
+    $(".welcome-msg").remove();
     $(".search-area").addClass("btn-results");
     var caContent = $("#get-city");
 

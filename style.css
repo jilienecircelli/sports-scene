@@ -13,7 +13,18 @@ body {
 }
 
 .search-area {
-    padding: 28%;
+    padding-left: 28%;
+    padding-right: 28%;
+    padding-bottom: 28%;
+    padding-top: 20%;
+}
+
+.welcome-msg {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .input-field {
