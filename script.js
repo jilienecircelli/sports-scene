@@ -199,7 +199,7 @@ function currentlocationWeather() {
         }).then(function(response) {
             console.log(response);
             var iconcode = response.weather[0].icon;
-            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 
             // Log the queryURL
             console.log(queryURL);
@@ -226,7 +226,7 @@ currentlocationWeather();
 function cityWeather() {
     var apiKey = "03e24d7d731fc83efc64f5aa4eb937c1";
     var queryURL =
-        "http://api.openweathermap.org/data/2.5/weather?q=" +
+        "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         "&appid=" +
         apiKey;
@@ -239,7 +239,7 @@ function cityWeather() {
         // We store all of the retrieved data inside of an object called "response"
         .then(function(response) {
             var iconcode = response.weather[0].icon;
-            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
 
             // Log the queryURL
             console.log(queryURL);
