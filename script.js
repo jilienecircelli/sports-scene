@@ -261,7 +261,7 @@ function cityWeather() {
         });
 }
 
-$(".btn").on("click", function() {
+function doSearch(){
     $(".search-area").removeClass();
     $(".search-area").addClass("btn-results");
     var caContent = $("#get-city");
@@ -272,4 +272,14 @@ $(".btn").on("click", function() {
     pullingEvents();
 
     cityWeather();
-});
+}
+
+$(document).on("keypress", function(e) {
+   
+    if(e.which == 13) {
+         e.preventDefault()
+        doSearch();
+    }
+  })
+
+$(".btn").on("click", doSearch);
